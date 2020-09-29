@@ -16,14 +16,21 @@ huffman -d story.huff
 
 ## Encode / Decode
 
-* Encode the input file with the algorithm and write the encoded data to the file along with all the information, to decompress a file. Possibly you can maintain a header section where you save all the encoding information. The encoded file can have an extension `*.huff` 
+* Encode the input file with the algorithm and write the encoded data to the file along with all the information, to decompress a file. Possibly one can maintain a header section to save all the encoding information. The encoded file can have an extension `*.huff`.
+
 * Read the encoding section to get the information required to decode the file and write the decoded data to the file. The decoded file should be the same as the input file.
-* Create a loss function that returns the differences between the decoded and the input file, which can be helpful in the long run (one can avoid manual inspections).
-* Create at least 3 tests inside the test script to test your functions or modules.
+
+* Make use of the script `diff.sh` which gives the detailed differences between the input and the decoded file, which can be helpful in the long run (one can avoid manual inspections) and gives the idea about loss of data.
+
+  ```bash
+  ./diff.sh <INPUT_FILE> <DECODED_FILE>
+  ```
+
+* Create at least 3 tests (covering basic/edge cases) inside the test script to test all functions or modules.
 
 ## Evaluation
 
-The code will be evaluated based on the design, readability, performance, accuracy, and much more. The best code will be merged into the master after evaluation. Submit Pull Request. I'll evaluate your code as soon as possible. if you have got any doubts, create an issue in the repo, so that others can also refer to it. Watch the recorded session in case if you have missed it.
+The code will be evaluated based on the design, readability, performance, accuracy, and much more. The best code will be merged into the master after evaluation. Submit Pull Request. I'll evaluate the code as soon as possible. If you have got any doubts, create an issue in the repo, so that others can also refer to it. Watch the recorded session in case if you have missed it.
 
 ## References
 
