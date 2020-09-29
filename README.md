@@ -5,14 +5,15 @@ A basic text file compression algorithm using binary trees in Python3. This is a
 ## Inputs
 ```
 # To compress a file
-huffman -e story.txt
+huffman -e story.txt -o story.huff
 # To extract a file
-huffman -d story.huff
+huffman -d story.huff -o story_.txt
 ```
 
 * Options
   * -e :  followed by the text file to compress.
   * -d :  followed by the compressed file to extract.
+  * -o :  followed by the filename to write the content.
 
 ## Encode / Decode
 
@@ -31,6 +32,17 @@ huffman -d story.huff
 ## Evaluation
 
 The code will be evaluated based on the design, readability, performance, accuracy, and much more. The best code will be merged into the master after evaluation. Submit Pull Request. I'll evaluate the code as soon as possible. If you have got any doubts, create an issue in the repo, so that others can also refer to it. Watch the recorded session in case if you have missed it.
+
+## Guidelines
+
+Before submitting PR, make sure you run the below scripts. These scripts run all the test and evaluate your code.
+
+```bash
+# run all the tests in test.py
+./run_test.sh
+# evaluate your code
+./run.sh
+```
 
 ## References
 
