@@ -1,0 +1,36 @@
+name: Evaluate code
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.6]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install pytest
+          
+      - name: Test with pytest
+        run: |
+          ./run_test.sh
+          
+      - name: Evaluate code
+        run: |
+          ./run.sh
