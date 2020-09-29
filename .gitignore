@@ -1,0 +1,8 @@
+*.huff
+*.egg-info
+*.iml
+*.log
+*.pyc
+.idea
+.vscode
+__pycache__
