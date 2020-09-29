@@ -5,9 +5,9 @@ A basic text file compression algorithm using binary trees in Python3. This is a
 ## Inputs
 ```
 # To compress a file
-huffman -e story.txt
+huffman.py -e story.txt
 # To extract a file
-huffman -d story.huff
+huffman.py -d story.huff
 ```
 
 * Options
