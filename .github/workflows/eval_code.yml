@@ -26,11 +26,11 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip install pytest
-          
-      - name: Test with pytest
-        run: |
-          ./run_test.sh
-          
+
       - name: Evaluate code
         run: |
           ./run.sh
+
+      - name: Test with pytest
+        run: |
+          ./run_test.sh
