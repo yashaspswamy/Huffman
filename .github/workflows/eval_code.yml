@@ -30,6 +30,10 @@ jobs:
       - name: Evaluate code
         run: |
           ./run.sh
+    
+      - name: Profile code
+        run: |
+          ./profile.sh
 
       - name: Test with pytest
         run: |
