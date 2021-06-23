@@ -89,7 +89,7 @@ def decode(input_file, output_file):
 	print("decoding ", input_file, output_file)
 	with open(input_file, 'r') as file:
 		data = file.read()
-	# print("------------------, ", decimalToBinary(int(data)))
+	# print("------------------", decimalToBinary(int(data)))
 	with open("encodings.json", 'r') as file:
 		charCodes = json.load(file)
 	codes = charCodes.values()
@@ -97,13 +97,12 @@ def decode(input_file, output_file):
 	decoded_bin = ""
 	bit_string = ''
 	for i in range(len(data)):
-		char = data[i]
-		char_int = ord(char)
-		char_bin = decimalToBinary(char_int)
-		char_bin_rev = char_bin[::-1] 
-		while len(char_bin_rev) < 8:
-			char_bin_rev += '0'
-		char_bin = char_bin_rev[::-1]
+		cint = ord(data[i])
+		bin = decimalToBinary(cint)
+		bin_r = bin[::-1] 
+		while len(bin_r) < 8:
+			bin_r += '0'
+		char_bin = bin_r[::-1]
 		decoded_bin += str(char_bin)
 	
 	decodedChar = ""
